@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "284697330247",
+    "project_id": "fir-chat-62cc2",
+    "storage_bucket": "fir-chat-62cc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284697330247:android:ba52b013d29219bac96762",
+        "android_client_info": {
+          "package_name": "com.faisal.firebase_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284697330247-rreomo1nu1sqga0gsv7mjn1nop22rgnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS6XlyIUxNqv9TsBdq2tx6CtiJaNO1ZRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284697330247-rreomo1nu1sqga0gsv7mjn1nop22rgnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,12 +1,10 @@
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
-  //TODO: Implement SplashController
-
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+
   }
 
   @override
@@ -16,5 +14,4 @@ class SplashController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

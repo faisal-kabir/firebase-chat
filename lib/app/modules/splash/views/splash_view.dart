@@ -8,20 +8,25 @@ class SplashView extends GetView<SplashController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            const Positioned(
-              left: 50,
-              child: FlutterLogo(size: 150,),
+      body: GetBuilder<SplashController>(
+        init: controller,
+        builder: (_) {
+          return Center(
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                const Positioned(
+                  left: 50,
+                  child: FlutterLogo(size: 150,),
+                ),
+                Positioned(
+                  right: 50,
+                  child: Image.asset('assets/firestore.png',height: 150,width: 150,)
+                )
+              ],
             ),
-            Positioned(
-              right: 50,
-              child: Image.asset('assets/firestore.png',height: 150,width: 150,)
-            )
-          ],
-        ),
+          );
+        }
       ),
     );
   }

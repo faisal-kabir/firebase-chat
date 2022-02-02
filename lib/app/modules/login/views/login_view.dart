@@ -1,3 +1,4 @@
+import 'package:firebase_chat/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -19,7 +20,7 @@ class LoginView extends GetView<LoginController> {
           return Form(
             key: controller.formKey,
             child: Container(
-              padding: EdgeInsets.only(left: 16,right: 16),
+              padding: const EdgeInsets.only(left: 16,right: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -40,6 +41,13 @@ class LoginView extends GetView<LoginController> {
                   ElevatedButton(
                     onPressed: () => controller.login(),
                     child: const Text('Login')
+                  ),
+                  const SizedBox(height: 16,),
+                  TextButton(
+                    onPressed: (){
+                      Get.toNamed(Routes.REGISTER);
+                    },
+                    child: const Text('Register')
                   )
                 ],
               ),

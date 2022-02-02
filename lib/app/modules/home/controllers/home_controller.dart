@@ -1,12 +1,17 @@
+import 'package:firebase_chat/app/data/messages.dart';
+import 'package:firebase_chat/app/helper/firebase_database.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  FireDatabase fireDatabase=FireDatabase();
+  List<Messages> allContacts=[];
 
-  final count = 0.obs;
+  RxBool loading=true.obs;
+
   @override
   void onInit() {
     super.onInit();
+    getAllContacts();
   }
 
   @override
@@ -16,5 +21,10 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  void getAllContacts() async {
+    loading(true);
+    allContacts = await fireDatabase.getContacts();
+    loading(false);
+  }
 }
